@@ -2,5 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './app/App';
-
-ReactDOM.render(<App />, document.getElementById('root'));
+import { Provider } from 'react-router-dom';
+ReactDOM.render(
+  <Provider>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
