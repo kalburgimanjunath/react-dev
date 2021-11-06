@@ -29,6 +29,7 @@ export default function Post({ post }) {
       <h1>Avatar</h1>
       <div>
         <div>{post.title}</div>
+        <div>{post.likes}</div>
       </div>
     </div>
   );
