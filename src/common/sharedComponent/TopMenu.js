@@ -7,18 +7,15 @@ export default function TopMenu() {
   const navitem = ['Message', 'Notification', 'Profile'];
   return (
     <div>
-      <div>
-        <button>Create Post</button>
-      </div>
-      {/* {navitem.map((item) => {
-        return <div>{item}</div>;
-      })} */}
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="#home">Dev</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
+              <Nav.Link>
+                <button>Create Post</button>
+              </Nav.Link>
               {navitem.map((item) => {
                 return <Nav.Link href={item}>{item}</Nav.Link>;
               })}

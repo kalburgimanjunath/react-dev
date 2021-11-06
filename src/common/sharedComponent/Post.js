@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 export default function Post({ post }) {
   // const post = [
   //   {
@@ -28,8 +29,12 @@ export default function Post({ post }) {
     <div>
       <h1>Avatar</h1>
       <div>
-        <div>{post.title}</div>
-        <div>{post.likes}</div>
+        <div>
+          <Link to="/postid">{post.title}</Link>
+        </div>
+        <div>
+          <Link to="/link">{post.likes}</Link>
+        </div>
       </div>
     </div>
   );
