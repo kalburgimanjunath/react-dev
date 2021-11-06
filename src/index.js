@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './app/App';
-import { Provider } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 ReactDOM.render(
-  <Provider>
+  <Router>
     <App />
-  </Provider>,
+  </Router>,
   document.getElementById('root')
 );
