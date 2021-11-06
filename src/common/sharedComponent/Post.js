@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Avatar from './Avatar';
+import Badge from 'react-bootstrap/Badge';
 export default function Post({ post }) {
   // const post = [
   //   {
@@ -27,13 +29,30 @@ export default function Post({ post }) {
   // ];
   return (
     <div>
-      <h1>Avatar</h1>
       <div>
+        <Avatar />
         <div>
           <Link to="/postid">{post.title}</Link>
         </div>
         <div>
-          <Link to="/link">{post.likes}</Link>
+          {post.tags.map((item) => {
+            return (
+              <Badge bg="primary" text="light">
+                {item}
+              </Badge>
+            );
+          })}
+        </div>
+        <div>
+          <Link to="/link">
+            <i class="far fa-heart"></i>
+            {post.likes}
+          </Link>
+          <Link to="/link">
+            <i class="far fa-comment"></i>
+            {post.likes}
+          </Link>
+          <button className="btn btn-primary">Save</button>
         </div>
       </div>
     </div>
